@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Poppins:wght@600&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="hero-section" id="home">
+    <div class="header">
+      <!-- Логотип -->
+        <div class="logo-container">
+            <a href="#" class="logo-link">
+                <img class="logo-img" src="https://thumbs.dreamstime.com/b/woman-shoe-logo-footwear-icon-lady-boots-shop-symbol-store-fashion-design-girl-boot-boutique-sign-high-heeled-shoes-brand-vector-231999392.jpg" alt="logo">
+            </a>
+        </div>
+        <ul class="nav-list">
+            <li><a class="nav-list-link" href="#home">Головна</a></li>
+            <li><a class="nav-list-link" href="#all-shoes">Всі</a></li>
+            <li><a class="nav-list-link" href="#men-shoes">Чоловіче</a></li>
+            <li><a class="nav-list-link" href="#women-shoes">Жіноче</a></li>
+            <li><a class="nav-list-link" href="#kids-shoes">Дитяче</a></li>
+            <li><a class="nav-list-link" href="#shoes-with-discounts">Знижки до 70%</a></li>
+            <li><a class="nav-list-link" href="#new-arrivals">Новинки</a></li>
+            <li><a class="nav-list-link" href="about.html">Про нас</a></li>
+            <li>
+                <a href="#">
+                  <!-- Чоловічок для "увійти"-->
+                    <svg class="man-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="8" r="4"></circle>
+                        <path d="M16 16c-1.6-1-3.4-1.5-4-1.5s-2.4.5-4 1.5c-1.6 1-3 2.7-3 4v1h14v-1c0-1.3-1.4-3-3-4z"></path>
+                    </svg>
+                    Увійти
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Вітання на фоні-->
+    <div class="hero-content">
+        <h1>Ласкаво просимо до нашого магазину взуття</h1>
+        <p>Стильне та якісне взуття для кожного!</p>
+    </div>
+    
+</div>
+<!-- Всі моделі -->
+<section id="all-shoes" class="shoes-section">
+    <h2>Всі моделі взуття</h2>
+    <div class="shoes-container">
+        <!-- Карточка 1 -->
+        <div class="shoe-card">
+            <img src="images/найк.jpg" alt="Кросівки Nike">
+            <h3>Кросівки Nike</h3>
+            <p>Зручні кросівки для активного життя</p>
+            
+            <!-- Вибір розміру та кнопка "Купити" -->
+            <div class="shoe-options">
+                <label for="size1">Розмір:</label>
+                <select id="size1" class="size-select">
+                    <option value="37">37</option>
+                    <option value="38">38</option>
+                    <option value="39">39</option>
+                    <option value="40">40</option>
+                </select>
+                <span class="price">₴5000</span>
+                <button class="buy-btn">Купити</button>
+                <button class="add-to-cart-btn">У кошик</button>
+
+            </div>
+        </div>
+
+        <!-- Карточка 2 -->
+        <div class="shoe-card">
+            <img src="images/дитячі сандалля.jpg" alt="Дитячі босоніжки">
+            <h3>Дитячі босоніжки</h3>
+            <p>Зручні та стильні босоніжки</p>
+            
+            <!-- Вибір розміру та кнопка "Купити" -->
+            <div class="shoe-options">
+                <label for="size2">Розмір:</label>
+                <select id="size2" class="size-select">
+                    <option value="36">25</option>
+                    <option value="37">26</option>
+                    <option value="38">27</option>
+                    <option value="39">28</option>
+                </select>
+                <span class="price">₴2000</span>
+                <button class="buy-btn">Купити</button>
+                <button class="add-to-cart-btn">У кошик</button>
+
+            </div>
+        </div>
+
+        <!-- Карточка 3 -->
+        <div class="shoe-card">
+            <img src="images/кросівки чол.jpg" alt="Класичні туфлі">
+            <h3>Класичні туфлі</h3>
+            <p>Елегантні туфлі для елітного офісу</p>
+            
+            <!-- Вибір розміру та кнопка "Купити" -->
+            <div class="shoe-options">
+                <label for="size3">Розмір:</label>
+                <select id="size3" class="size-select">
+                    <option value="40">36</option>
+                    <option value="41">37</option>
+                    <option value="42">38</option>
+                    <option value="43">39</option>
+                </select>
+                <span class="price">₴3400</span>
+                <button class="buy-btn" onclick="window.location.href='checkout.html'">Купити</button>
+                <button class="add-to-cart-btn">У кошик</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Чоловіче взуття -->
+<section id="men-shoes" class="shoes-section">
+  <h2>Чоловіче взуття</h2>
+  <div class="shoes-container">
+      <!-- 1 -->
+      <div class="shoe-card">
+          <img src="images/кросівки чол.jpg" alt="Чоловічі кросівки Nike">
+          <h3>Чоловічі кросівки Nike</h3>
+          <p>Стильні та зручні для спорту</p>
+          <div class="shoe-options">
+              <label for="size-men1">Розмір:</label>
+              <select id="size-men1" class="size-select">
+                  <option value="41">41</option>
+                  <option value="42">42</option>
+                  <option value="43">43</option>
+                  <option value="44">44</option>
+              </select>
+              <span class="price">₴6000</span>
+              <button class="buy-btn">Купити</button>
+              <button class="add-to-cart-btn">У кошик</button>
+          </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="shoe-card">
+          <img src="images/чололовічі чер.jpg" alt="Чоловічі черевики">
+          <h3>Чоловічі черевики</h3>
+          <p>Теплі зимові черевики</p>
+          <div class="shoe-options">
+              <label for="size-men2">Розмір:</label>
+              <select id="size-men2" class="size-select">
+                  <option value="40">40</option>
+                  <option value="41">41</option>
+                  <option value="42">42</option>
+                  <option value="43">43</option>
+              </select>
+              <span class="price">₴3500</span>
+              <button class="buy-btn">Купити</button>
+              <button class="add-to-cart-btn">У кошик</button>
+          </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="shoe-card">
+          <img src="images/чол туфлі.jpg" alt="Чоловічі класичні туфлі">
+          <h3>Чоловічі класичні туфлі</h3>
+          <p>Для бізнес-зустрічей та свят</p>
+          <div class="shoe-options">
+              <label for="size-men3">Розмір:</label>
+              <select id="size-men3" class="size-select">
+                  <option value="39">39</option>
+                  <option value="40">40</option>
+                  <option value="41">41</option>
+                  <option value="42">42</option>
+              </select>
+              <span class="price">₴4200</span>
+              <button class="buy-btn">Купити</button>
+              <button class="add-to-cart-btn">У кошик</button>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!--Жіноче взуття -->
+<section id="women-shoes" class="shoes-section">
+  <h2>Жіноче взуття</h2>
+  <div class="shoes-container">
+      <!-- 1 -->
+      <div class="shoe-card">
+          <img src="images/найк.jpg" alt="Жіночі кросівки Nike">
+          <h3>Жіночі кросівки Nike</h3>
+          <p>Легкі та стильні для спорту</p>
+          <div class="shoe-options">
+              <label for="size-women1">Розмір:</label>
+              <select id="size-women1" class="size-select">
+                  <option value="36">36</option>
+                  <option value="37">37</option>
+                  <option value="38">38</option>
+                  <option value="39">39</option>
+              </select>
+              <span class="price">₴5000</span>
+              <button class="buy-btn">Купити</button>
+              <button class="add-to-cart-btn">У кошик</button>
+          </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="shoe-card">
+          <img src="images/зимове взуття.jpg" alt="Жіночі черевики">
+          <h3>Жіночі черевики</h3>
+          <p>Теплі зимові черевики для холодної погоди</p>
+          <div class="shoe-options">
+              <label for="size-women2">Розмір:</label>
+              <select id="size-women2" class="size-select">
+                  <option value="36">36</option>
+                  <option value="37">37</option>
+                  <option value="38">38</option>
+                  <option value="39">39</option>
+              </select>
+              <span class="price">₴3800</span>
+              <button class="buy-btn">Купити</button>
+              <button class="add-to-cart-btn">У кошик</button>
+          </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="shoe-card">
+          <img src="images/класичні туфлі.jpg" alt="Жіночі класичні туфлі">
+          <h3>Жіночі класичні туфлі</h3>
+          <p>Ідеальні для роботи або вечірніх виходів</p>
+          <div class="shoe-options">
+              <label for="size-women3">Розмір:</label>
+              <select id="size-women3" class="size-select">
+                  <option value="35">35</option>
+                  <option value="36">36</option>
+                  <option value="37">37</option>
+                  <option value="38">38</option>
+              </select>
+              <span class="price">₴4500</span>
+              <button class="buy-btn">Купити</button>
+              <button class="add-to-cart-btn">У кошик</button>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!--Дитяче взуття-->
+<section id="kids-shoes" class="shoes-section">
+  <h2>Дитяче взуття</h2>
+  <div class="shoes-container">
+      <!-- 1 -->
+      <div class="shoe-card">
+          <img src="images/дитячі кросівки.jpg" alt="Дитячі кросівки Nike">
+          <h3>Дитячі кросівки Nike</h3>
+          <p>Легкі та зручні для активних малюків</p>
+          <div class="shoe-options">
+              <label for="size-kids1">Розмір:</label>
+              <select id="size-kids1" class="size-select">
+                  <option value="28">28</option>
+                  <option value="29">29</option>
+                  <option value="30">30</option>
+                  <option value="31">31</option>
+              </select>
+              <span class="price">₴2200</span>
+              <button class="buy-btn">Купити</button>
+              <button class="add-to-cart-btn">У кошик</button>
+          </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="shoe-card">
+          <img src="images/дитячі чоботи.jpg" alt="Дитячі черевики">
+          <h3>Дитячі черевики</h3>
+          <p>Теплі черевики для зимових прогулянок</p>
+          <div class="shoe-options">
+              <label for="size-kids2">Розмір:</label>
+              <select id="size-kids2" class="size-select">
+                  <option value="25">25</option>
+                  <option value="26">26</option>
+                  <option value="27">27</option>
+                  <option value="28">28</option>
+              </select>
+              <span class="price">₴2800</span>
+              <button class="buy-btn">Купити</button>
+              <button class="add-to-cart-btn">У кошик</button>
+          </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="shoe-card">
+          <img src="images/дитячі босоніжка.jpg" alt="Дитячі сандалії">
+          <h3>Дитячі сандалії</h3>
+          <p>Літнє зручне взуття для малюків</p>
+          <div class="shoe-options">
+              <label for="size-kids3">Розмір:</label>
+              <select id="size-kids3" class="size-select">
+                  <option value="22">22</option>
+                  <option value="23">23</option>
+                  <option value="24">24</option>
+                  <option value="25">25</option>
+              </select>
+              <span class="price">₴1500</span>
+              <button class="buy-btn">Купити</button>
+              <button class="add-to-cart-btn">У кошик</button>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- Знижка до 70% -->
+<section id="shoes-with-discounts" class="shoes-section">
+  <h2>Знижки на взуття</h2>
+  <div class="shoes-container">
+      <!-- 1 -->
+      <div class="shoe-card">
+          <img src="images/бант і стрази.webp" alt="Жіночі туфлі">
+          <h3>Жіночі підбори</h3>
+          <p>Високі підбори з бантом і стразами</p>
+          <div class="shoe-options">
+              <label for="size-men1">Розмір:</label>
+              <select id="size-men1" class="size-select">
+                  <option value="41">41</option>
+                  <option value="42">42</option>
+                  <option value="43">43</option>
+                  <option value="44">44</option>
+              </select>
+              <span class="old-price">₴6000</span> <!-- стара ціна -->
+              <span class="new-price">₴1800</span> <!-- нова ціна -->
+              <button class="buy-btn">Купити</button>
+              <button class="add-to-cart-btn">У кошик</button>
+          </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="shoe-card">
+          <img src="images/білого кольру крос.jpg" alt="Дитячі кросівки">
+          <h3>Дитячі кросівки</h3>
+          <p>Білі кросівки для дівчаток білого кольору</p>
+          <div class="shoe-options">
+              <label for="size-men2">Розмір:</label>
+              <select id="size-men2" class="size-select">
+                  <option value="40">40</option>
+                  <option value="41">41</option>
+                  <option value="42">42</option>
+                  <option value="43">43</option>
+              </select>
+              <span class="old-price">₴3500</span> <!-- стара ціна -->
+              <span class="new-price">₴1050</span> <!-- нова ціна -->
+              <button class="buy-btn">Купити</button>
+              <button class="add-to-cart-btn">У кошик</button>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- Новинки -->
+<section id="new-arrivals" class="shoes-section">
+  <h2>Новинки</h2>
+  <div class="shoes-container">
+      <!-- 1 -->
+      <div class="shoe-card">
+          <img src="images/новинка кросівки.jpg" alt=" кросівки Nike">
+          <h3> кросівки Nike</h3>
+          <p>Комфорт і стиль для кожного дня</p>
+          <div class="shoe-options">
+              <label for="size-new1">Розмір:</label>
+              <select id="size-new1" class="size-select">
+                  <option value="41">41</option>
+                  <option value="42">42</option>
+                  <option value="43">43</option>
+                  <option value="44">44</option>
+              </select>
+              <span class="price">₴4500</span> 
+              <button class="buy-btn">Купити</button>
+              <button class="add-to-cart-btn">У кошик</button>
+          </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="shoe-card">
+          <img src="images/черевики новинка.jpg" alt=" черевики">
+          <h3> черевики</h3>
+          <p>Модні черевики для осені</p>
+          <div class="shoe-options">
+              <label for="size-new2">Розмір:</label>
+              <select id="size-new2" class="size-select">
+                  <option value="38">38</option>
+                  <option value="39">39</option>
+                  <option value="40">40</option>
+                  <option value="41">41</option>
+              </select>
+              <span class="price">₴3800</span> 
+              <button class="buy-btn">Купити</button>
+              <button class="add-to-cart-btn">У кошик</button>
+          </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="shoe-card">
+          <img src="images/новинки класичні туфлі.jfif" alt=" класичні туфлі">
+          <h3> класичні туфлі</h3>
+          <p>Ідеальні для урочистих подій</p>
+          <div class="shoe-options">
+              <label for="size-new3">Розмір:</label>
+              <select id="size-new3" class="size-select">
+                  <option value="37">37</option>
+                  <option value="38">38</option>
+                  <option value="39">39</option>
+                  <option value="40">40</option>
+              </select>
+              <span class="price">₴5000</span> 
+              <button class="buy-btn">Купити</button>
+              <button class="add-to-cart-btn">У кошик</button>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<script src="script.js"></script>
+</body>
+</html>

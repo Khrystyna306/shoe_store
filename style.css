@@ -1,0 +1,433 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lexend Giga", serif;
+    background: none;
+    background-attachment: fixed; /* Це дозволяє фону залишатись на місці при скролі */
+    background-size: cover; /* Покриває всю область */
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.hero-section {
+    width: 100%;
+    height: 100vh;
+    background: url('images/edited_image (1).png') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    padding: 0 20px;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo-img {
+    height: 45px;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list li {
+    padding: 0 10px;
+    font-size: 14px;
+    color: white;
+}
+
+.nav-list-link {
+    position: relative;
+}
+
+.nav-list-link::after {
+    content: "";
+    background: rgb(74, 48, 48);
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    transform: scaleX(0);
+    transition: all .25s ease;
+}
+
+.nav-list-link:hover::after {
+    transform: scaleX(1);
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.shoes-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.shoes-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.shoe-card {
+    width: 250px;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.shoe-card:hover {
+    transform: scale(1.05);
+}
+
+.shoe-card img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.shoe-options {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.shoe-options label {
+    font-size: 14px;
+    color: #333;
+}
+
+.size-select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+}
+
+.price {
+    display: block;
+    margin-top: 15px;
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+.buy-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: beige; /* Бежевий колір */
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buy-btn:hover {
+    background-color: #d9c7a1; /* Трохи темніший бежевий при наведенні */
+}
+
+.buy-btn:focus {
+    outline: none;
+}
+
+.add-to-cart-btn {
+    background-color: #b06943;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #e0b90f;
+}
+
+/* Стили для кошика */
+#cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item span {
+    font-size: 16px;
+}
+
+.cart-summary {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+#total-price {
+    font-size: 20px;
+    color: #e74c3c;
+}
+
+#checkout-btn {
+    padding: 12px 25px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#checkout-btn:hover {
+    background-color: #218838;
+}
+
+/* Стилі для форми оформлення замовлення */
+.checkout-container {
+    padding: 30px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-container label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+.checkout-container input, 
+.checkout-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.checkout-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.checkout-container button:hover {
+    background-color: #2980b9;
+}
+.shoe-card img {
+    width: 100%;      /* робить зображення на 100% ширини карточки */
+    height: auto;     /* зберігає пропорції зображення */
+    max-height: 250px; /* задає максимальну висоту для зображення */
+    object-fit: cover; /* забезпечує правильне заповнення простору */
+}
+/* Для знижки до 70%*/
+.shoe-card .old-price {
+    text-decoration: line-through; /* закреслює стару ціну */
+    color: #999; /* сірий колір для старої ціни */
+    margin-right: 10px; /* відступ від нової ціни */
+}
+
+.shoe-card .new-price {
+    color: red; /* червоний колір для нової ціни */
+    font-weight: bold; /* жирний шрифт для нової ціни */
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+.about-section {
+    padding: 50px 20px;
+    background: rgba(255, 255, 255, 0.8); /* Напівпрозорий фон */
+    border-radius: 10px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+.about-section {
+    padding: 50px 20px;
+}
+
+.about-container {
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    align-items: center;
+    gap: 20px;
+}
+
+.about-image {
+    width: 50%;
+    border-radius: 10px;
+}
+
+.about-text {
+    width: 50%;
+}
+
+.about-text h2, .about-text h3 {
+    color: #473429;
+}
+
+.about-text ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.about-text p, .about-text li {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.about-text a {
+    color: #473429;
+    text-decoration: none;
+}
+
+.about-text a:hover {
+    text-decoration: underline;
+}
+
+.why-choose-us {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.why-choose-us h2 {
+    font-size: 28px;
+    color:#473429;
+    margin-bottom: 30px;
+}
+
+.features-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.feature {
+    width: 250px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.feature img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.feature h3 {
+    margin-top: 15px;
+    color: #473429;
+}
+
+.feature p {
+    font-size: 16px;
+    color: #555;
+}
+
+.contact-info {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #f1f1f1;
+}
+
+.contact-info h2 {
+    font-size: 26px;
+    color: #473429;
+}
+
+.contact-info p {
+    font-size: 18px;
+}
+
+.contact-info a {
+    color: #473429;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #343a40;
+    color: white;
+    margin-top: 50px;
+}
+

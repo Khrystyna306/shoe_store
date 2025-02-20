@@ -29,8 +29,7 @@
             <li><a class="nav-list-link" href="#new-arrivals">Новинки</a></li>
             <li><a class="nav-list-link" href="about.html">Про нас</a></li>
             <li>
-                <a href="#">
-                  <!-- Чоловічок для "увійти"-->
+                <a href="admin_login.php"> 
                     <svg class="man-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="12" cy="8" r="4"></circle>
                         <path d="M16 16c-1.6-1-3.4-1.5-4-1.5s-2.4.5-4 1.5c-1.6 1-3 2.7-3 4v1h14v-1c0-1.3-1.4-3-3-4z"></path>
@@ -38,6 +37,7 @@
                     Увійти
                 </a>
             </li>
+            
         </ul>
     </div>
 
@@ -48,6 +48,8 @@
     </div>
     
 </div>
+
+</main>
 <!-- Всі моделі -->
 <section id="all-shoes" class="shoes-section">
     <h2>Всі моделі взуття</h2>
@@ -73,7 +75,9 @@
 
             </div>
         </div>
-
+        <div class="categories">
+            
+        </div>
         <!-- Карточка 2 -->
         <div class="shoe-card">
             <img src="images/дитячі сандалля.jpg" alt="Дитячі босоніжки">
@@ -413,9 +417,10 @@
           </div>
       </div>
   </div>
+ 
 </section>
 
-
+<?php include 'index.php'; ?>
 <script src="script.js"></script>
 </body>
 </html>
